@@ -16,6 +16,37 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def minutes_to_seconds(minutes):
+    return minutes * 60
+
+def hours_to_seconds(hours):
+    return hours * 3600
+
+def seconds_in_a_day():
+    return 24 * 3600
+
+def hours_in_june():
+    days_in_june = 30
+    return days_in_june * 24
+
+def minutes_in_august():
+    days_in_august = 31
+    return days_in_august * 24 * 60
+
+def minutes_in_a_year():
+    days_in_year = 365
+    return days_in_year * 24 * 60
+
+# Testing the functions
+print("1 minute in seconds:", minutes_to_seconds(1))
+print("1 hour in seconds:", hours_to_seconds(1))
+print("Seconds in a day:", seconds_in_a_day())
+print("Hours in June:", hours_in_june())
+print("Minutes in August:", minutes_in_august())
+print("Minutes in a year:", minutes_in_a_year())
+
+
 # ---------------------------------
 
 
@@ -28,6 +59,20 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+
+def mid(string):
+    length = len(string)
+    if length % 2 == 0:
+        return ""
+    else:
+        return string[length // 2]
+
+# Testing the function
+print(mid("abc"))  # Output: "b"
+print(mid("aaaa"))  # Output: ""
+
+
 # ---------------------------------
 
 
@@ -37,6 +82,15 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+
+def hide_credit_card_number(card_number):
+    return '*' * (len(card_number) - 4) + card_number[-4:]
+
+# Testing the function
+print(hide_credit_card_number("1234567894444"))  # Output: "*********4444"
+
+
 # ---------------------------------
 
 
@@ -63,6 +117,20 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def online_count(statuses):
+    return sum(status == "online" for status in statuses.values())
+
+# Testing the function
+statuses = {
+    "John": "online",
+    "Paul": "offline",
+    "George": "online",
+    "Ringo": "offline"
+}
+print(online_count(statuses))  # Output: 2
+
+
 # ---------------------------------
 
 
@@ -73,6 +141,14 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def apply_discount(price, discount):
+    return price - (price * discount / 100)
+
+# Testing the function
+print(apply_discount(100, 20))  # Output: 80
+
+
 # ---------------------------------
 
 
@@ -84,6 +160,15 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+import math
+
+def pythagorean_theorem(a, b):
+    return math.sqrt(a**2 + b**2)
+
+# Testing the function
+print(pythagorean_theorem(3, 4))  # Output: 5.0
+
 # ---------------------------------
 
 
@@ -97,4 +182,17 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+
+def fibonacci_sequence(n1, n2):
+    sequence = [n1, n2]
+    for _ in range(9):
+        next_number = sequence[-1] + sequence[-2]
+        sequence.append(next_number)
+    return sequence
+
+# Testing the function
+print(fibonacci_sequence(0, 1))  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+print(fibonacci_sequence(5, 8))  # Output: [5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+
+
 # ---------------------------------
